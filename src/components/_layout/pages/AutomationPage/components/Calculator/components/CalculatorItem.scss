@@ -1,0 +1,239 @@
+@import "../../../../../../../styles/Mixins";
+@import "../../../../../../../styles/Theme";
+
+.calculator-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+
+  @include max(680px) {
+    flex-direction: column;
+    max-width: 380px;
+    margin: 0 auto 20px auto;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    padding-top: 3px;
+
+    &-icon {
+      width: 40px;
+      height: 40px;
+      display: block;
+      margin-left: 10px;
+      margin-right: 10px;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+
+    &-text {
+      color: #ffffff;
+      font: 18px/1 Montserrat-700
+    }
+  }
+
+  &__checkbox {
+
+    @include max(680px) {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+
+    .ant-checkbox {
+      transform: scale(2);
+
+      &.ant-checkbox-checked {
+        .ant-checkbox-inner {
+          border: none;
+        }
+      }
+    }
+
+    &_F2A93C {
+
+      .ant-checkbox {
+
+        &.ant-checkbox-checked {
+          .ant-checkbox-inner {
+            background-color: #F2A93C !important;
+          }
+        }
+      }
+    }
+
+    &_CC00FF {
+      .ant-checkbox {
+
+        &.ant-checkbox-checked {
+          .ant-checkbox-inner {
+            background-color: #CC00FF !important;
+          }
+        }
+      }
+    }
+
+    &_3B44F9 {
+      .ant-checkbox {
+
+        &.ant-checkbox-checked {
+          .ant-checkbox-inner {
+            background-color: #3B44F9 !important;
+          }
+        }
+      }
+    }
+
+    &_6BC623 {
+
+      .ant-checkbox {
+
+        &.ant-checkbox-checked {
+          .ant-checkbox-inner {
+            background-color: #6BC623 !important;
+          }
+        }
+      }
+    }
+
+    &_FF5555 {
+      .ant-checkbox {
+
+        &.ant-checkbox-checked {
+          .ant-checkbox-inner {
+            background-color: #FF5555 !important;
+          }
+        }
+      }
+    }
+
+    &_FF6B00 {
+      .ant-checkbox {
+
+        &.ant-checkbox-checked {
+          .ant-checkbox-inner {
+            background-color: #FF6B00 !important;
+          }
+        }
+      }
+    }
+
+    &_6015DB {
+      .ant-checkbox {
+
+        &.ant-checkbox-checked {
+          .ant-checkbox-inner {
+            background-color: #6015DB !important;
+          }
+        }
+      }
+    }
+
+    .ant-checkbox-inner {
+      background-color: transparent !important;
+    }
+  }
+
+  &__input-side {
+    display: flex;
+    align-items: center;
+  }
+
+  &__input-tool {
+    margin-right: 20px;
+    cursor: pointer;
+    &-lab {
+      width: 33px;
+      height: 33px;
+      min-width: 33px;
+      border-radius: 33px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255,255,255,0.35);
+      background-color: rgba(255,255,255,0.1);
+    }
+  }
+
+  &__input {
+    position: relative;
+    max-width: 260px;
+    border-radius: 12px 12px 8px 8px;
+    background-color: rgba(255,255,255,0.1);
+
+    @include max(680px) {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    &-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: 4px 12px 10px 12px;
+
+      span {
+        display: block;
+        font-size: 14px;
+        margin-right: 8px;
+        color: rgba(255,255,255,0.5);
+      }
+
+      input {
+        font-family: Montserrat-700;
+        padding: 8px 12px 6px;
+        background: transparent;
+        color: #ffffff;
+      }
+    }
+
+    &-slider {
+      position: absolute;
+      bottom: -3px;
+      width: 100%;
+      margin: 0 !important;
+
+      .ant-slider-rail {
+        background-color: #ffffff !important;
+      }
+
+      .ant-slider-rail,
+      .ant-slider-track,
+      .ant-slider-step {
+        border-radius: 0 0 30px 30px;
+      }
+
+      .ant-slider-track {
+        position: relative;
+        background-color: #3B44F9 !important;
+
+        // для тени на кружочке
+        //&::after {
+        //  content: '';
+        //  position: absolute;
+        //  top: 0;
+        //  left: 0;
+        //  width: 1px;
+        //  height: 1px;
+        //  background: radial-gradient(closest-side, #232b95 20%, transparent);
+        //}
+      }
+
+      .ant-slider-handle {
+        &:after {
+          box-shadow: 0 0 0 3px #ffffff !important;
+          background-color: #3B44F9 !important;
+        }
+      }
+    }
+  }
+}

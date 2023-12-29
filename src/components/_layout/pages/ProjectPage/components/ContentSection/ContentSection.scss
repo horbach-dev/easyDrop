@@ -1,0 +1,84 @@
+@import "../../../../../../styles/Mixins";
+
+.project-content-section {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 200px;
+    display: flex;
+    right: -400px;
+    width: 1200px;
+    height: 1200px;
+    background-image: url("../../../../../../images/decor_what-is.svg");
+    background-size: 100% 100%;
+    z-index: -1;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+    padding-bottom: 80px;
+
+    @include max(992px) {
+      margin-bottom: 60px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-title {
+      font-family: Montserrat-700;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      max-width: 750px;
+
+      &::before {
+        content: '';
+        position: relative;
+        display: inline-flex;
+        margin-right: 10px;
+        width: 30px;
+        height: 30px;
+        background-image: url("./images/cube.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+
+    &-item {
+      margin-top: 30px;
+      max-width: 750px;
+
+      &:nth-child(even) {
+
+        .what-is__content-title {
+          &::before {
+            background-image: url("./images/star.svg");
+          }
+        }
+      }
+    }
+
+    &-divider {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right, rgba(255,255,255,0.35), transparent);
+    }
+  }
+}

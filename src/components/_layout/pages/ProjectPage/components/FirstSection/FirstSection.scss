@@ -1,0 +1,63 @@
+@import "../../../../../../styles/Mixins";
+
+.project-first-section {
+
+  &__decor {
+    position: absolute;
+    display: block;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    z-index: -1;
+
+    &_first {
+      top: -150px;
+      left: 150px;
+      width: 500px;
+      height: 400px;
+      background-image: url("../../../../../../images/decor_title.svg");
+    }
+
+    &_second {
+      top: 0;
+      right: -150px;
+      width: 500px;
+      height: 400px;
+      background-image: url("../../../../../../images/decor_first-section.svg");
+    }
+  }
+
+  &__title {
+    max-width: 420px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+
+    @include max(920px) {
+      max-width: 640px;
+      margin: 0 auto;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &-offer {
+      min-width: 55%;
+
+      @include max(920px) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__actions {
+    max-width: 420px;
+    margin-top: 30px;
+
+    .btn:first-child {
+      margin-bottom: 20px;
+    }
+  }
+}

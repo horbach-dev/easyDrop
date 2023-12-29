@@ -1,0 +1,104 @@
+@import "../../../styles/Mixins";
+@import "../../../styles/Theme";
+
+.actual-project-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.1);
+
+  &__wrapper {
+    padding: 30px;
+
+    @include max(490px) {
+      padding: 20px;
+    }
+  }
+
+  &:hover:not(&_page) {
+    background: linear-gradient(120deg, #3B44F9, #CC00FF);
+  }
+
+  &__head {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 12px;
+
+    span {
+      display: inline-flex;
+      width: 50px;
+      height: 50px;
+      margin-right: 12px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &-title {
+      font: 24px/1.4 Montserrat-700;
+    }
+  }
+
+  &__divider {
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin: 30px 0;
+    border-radius: 2px;
+    background: linear-gradient(to right, rgba(255,255,255,0.8) 0, transparent 90%);
+  }
+
+  &__values {
+    border-radius: 20px;
+    padding: 0 30px;
+    background: transparent;
+
+    &_page {
+      padding: 30px;
+      background: linear-gradient(120deg, #3B44F9, #CC00FF);
+    }
+  }
+
+  &__value {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 6px 0;
+
+    &:first-child {
+      margin-bottom: 0;
+    }
+
+    &-title {
+      font-family: Montserrat-700;
+      line-height: 1;
+    }
+
+    &-label {
+      min-width: 106px;
+
+      @include max(560px) {
+        min-width: 80px;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include max(560px) {
+      flex-direction: column;
+
+      &-btn {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import "../../../../styles/Mixins";
+
+.not-found-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  font: 23px/1.4;
+
+  &__content {
+    margin-top: -200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  h2 {
+    margin-top: 150px;
+    font-size: 88px;
+    font-family: Montserrat-900;
+  }
+
+  p {
+    margin-bottom: 30px;
+  }
+}

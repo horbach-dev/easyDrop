@@ -1,0 +1,69 @@
+@import "../../../styles/Mixins";
+
+.footer {
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+
+  &__decor {
+    position: absolute;
+    display: block;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 753px;
+    height: 192px;
+    background-image: url("../../../images/decor_footer.svg");
+    background-position: center;
+    background-size: 100% 100%;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 140px;
+
+    @include max(720px) {
+      padding-bottom: 80px;
+    }
+
+    @include max(580px) {
+      padding-bottom: 60px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-family: Montserrat-700;
+    line-height: 1;
+    color: #ffffff;
+    text-decoration: none;
+
+    &::before {
+      content: '';
+      position: relative;
+      width: 20px;
+      height: 20px;
+      margin-right: 12px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    &_calculate {
+      &::before {
+        background-image: url("./calculate.svg");
+      }
+    }
+  }
+
+  &__copyright {
+    position: relative;
+    text-align: center;
+    padding-bottom: 16px;
+    font-size: 14px;
+  }
+}
