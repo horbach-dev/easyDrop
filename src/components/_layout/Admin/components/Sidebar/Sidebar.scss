@@ -1,0 +1,14 @@
+.sidebar {
+  position: fixed !important;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  overflow: auto;
+
+  .demo-logo-vertical {
+    height: 64px;
+    margin-bottom: 20px;
+    background-color: rgba(255,255,255,0.1);
+  }
+}

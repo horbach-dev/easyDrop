@@ -1,0 +1,220 @@
+@import "../../../../styles/Mixins";
+@import "../../../../styles/Theme";
+
+.automation-page {
+  display: flex;
+  flex-direction: column;
+
+  &__main {
+    &-content {
+      display: flex;
+      align-items: center;
+
+      @include max(960px) {
+        flex-direction: column;
+      }
+
+      &-offer {
+        position: relative;
+        width: 690px;
+        margin-top: 80px;
+
+        @include max(960px) {
+          margin-top: 0;
+          width: 100%;
+        }
+      }
+
+      &-border {
+        width: 100%;
+        margin-top: 140px;
+        height: 1px;
+        display: block;
+        background: linear-gradient(to right, rgba(255,255,255,0.35), transparent);
+
+        @include max(960px) {
+          display: none;
+        }
+      }
+    }
+
+    &-title {
+      width: 690px;
+
+      @include max(1184px) {
+        width: 650px;
+      }
+
+      @include max(960px) {
+        width: auto;
+      }
+    }
+
+    &-image {
+      position: relative;
+      width: 100%;
+
+      @include max(960px) {
+        flex-direction: column;
+        max-width: 450px;
+        margin-top: 70px;
+      }
+
+      img {
+        width: 600px;
+        aspect-ratio: 1;
+        transform: scale(1.4) translate(45px, 30px);
+
+        @include max(1360px) {
+          transform: scale(1.2) translate(45px, 30px);
+        }
+
+        @include max(1280px) {
+          transform: scale(1.1) translate(45px, 30px);
+        }
+
+        @include max(1210px) {
+          transform: none;
+        }
+
+        @include max(960px) {
+          width: auto;
+        }
+      }
+    }
+  }
+
+  &__divider {
+    width: 100%;
+    height: 1px;
+    display: block;
+    background: linear-gradient(to right, rgba(255,255,255,0.35), transparent 90%);
+  }
+
+  &__descriptions {
+    position: relative;
+
+    &-decor {
+      left: -100px;
+      top: -400px;
+      width: 800px;
+      height: 800px;
+      position: absolute;
+      z-index: 0;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url('./images/decor-descriptions.svg');
+    }
+
+    &-content {
+      max-width: 750px;
+    }
+  }
+
+  &__strategy {
+    position: relative;
+
+    &-decor {
+      right: -100px;
+      top: -200px;
+      width: 800px;
+      height: 800px;
+      position: absolute;
+      z-index: 0;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url('./images/decor-strategy.svg');
+    }
+
+    &-item {
+      position: relative;
+      max-width: 980px;
+      margin-bottom: 25px;
+      display: flex;
+
+      &::before {
+        position: absolute;
+        content: '';
+        display: flex;
+        top: 34px;
+        left: 14px;
+        width: 2px;
+        height: calc(100% - 14px);
+        background-color: #f27b3c;
+      }
+
+      &:last-child {
+        &:before {
+          content: none;
+        }
+      }
+
+      &-num {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+        border: 2px solid #f27b3c;
+        border-radius: 28px;
+        line-height: 1;
+        font-size: 16px;
+        font-family: Montserrat-700;
+        margin-right: 16px;
+      }
+
+      &-text {
+        padding-top: 3px;
+      }
+    }
+  }
+
+  &__faq {
+    color: #ffffff;
+
+    &-item {
+      width: 100%;
+      border-radius: 20px 20px 0 0 !important;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 70%, transparent 100%);
+      padding-bottom: 5px;
+
+      &-header {
+        padding: 15px 0 10px 20px !important;
+
+        div {
+          order: 2;
+        }
+
+        span {
+          order: 1;
+        }
+      }
+
+      .ant-collapse-header-text {
+        font-size: 18px;
+        font-family: Montserrat-700;
+      }
+
+      span, p {
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    background-size: 100% 100%;
+    z-index: -1;
+
+    &_first {
+      top: -150px;
+      left: 200px;
+      width: 500px;
+      height: 400px;
+      background-image: url("../../../../images/decor_title.svg");
+    }
+  }
+}

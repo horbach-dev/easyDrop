@@ -1,0 +1,71 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ffffff;
+  border-radius: 16px;
+  color: #ffffff;
+  padding: 16px 24px;
+  text-decoration: none;
+
+  &_with-icon {
+    svg {
+      margin-left: 12px;
+    }
+  }
+
+  &:hover:not(&_with-gradient) {
+    border-color: #CC00FF;
+    background: -webkit-linear-gradient(-85deg, #3B44F9, #CC00FF 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    path {
+      fill: #C0F;
+    }
+  }
+
+  &_with-gradient {
+    background: #ffffff;
+    border: none;
+
+    .btn__text {
+      position: relative;
+      z-index: 10;
+      background: -webkit-linear-gradient(-85deg, #3B44F9, #CC00FF 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: 0.2s;
+    }
+
+    &:hover {
+      background: -webkit-linear-gradient(140deg, #3B44F9, #CC00FF 100%);
+
+      .btn__text {
+        background: none;
+        -webkit-background-clip: initial;
+        -webkit-text-fill-color: #ffffff;
+        color: #ffffff;
+      }
+
+      path {
+        fill: #ffffff;
+      }
+    }
+  }
+
+  &_as-link {
+    background: none;
+    border-color: transparent;
+  }
+
+  &_disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &__text {
+    font-family: Montserrat-700;
+  }
+}

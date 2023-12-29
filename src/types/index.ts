@@ -7,3 +7,5 @@ export type AuthPayload = {
 
 export type RequestWithAuth = Request & AuthPayload;
 export type SocketWithAuth = Socket & AuthPayload;
+
+export type TLocale = 'en' | 'ru'

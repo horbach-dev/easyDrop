@@ -1,0 +1,48 @@
+@import "../../../styles/Mixins";
+
+.video-popup {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: block;
+
+  @include max(960px) {
+    height: 420px;
+  }
+
+  @include max(820px) {
+    height: 380px;
+  }
+
+  @include max(570px) {
+    height: 320px;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+}
+
+.popups_Video {
+  .popups__container {
+    max-width: 920px;
+  }
+
+  .popups__content {
+    padding: 40px;
+
+    @include max(680px) {
+      padding: 46px 16px 16px;
+    }
+  }
+
+  .popups__close {
+    top: 7px;
+    right: 7px;
+  }
+}

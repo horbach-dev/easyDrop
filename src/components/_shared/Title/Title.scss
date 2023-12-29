@@ -1,0 +1,32 @@
+@import "../../../styles/Mixins";
+
+.title {
+  position: relative;
+  font: 54px/1.185 Montserrat-900;
+  margin-bottom: 30px;
+  z-index: 10;
+
+  @include max(1184px) {
+    font-size: 48px;
+  }
+
+  @include max(1040px) {
+    font-size: 42px;
+  }
+
+  @include max(580px) {
+    font-size: 38px;
+  }
+
+  @include max(490px) {
+    font-size: 34px;
+  }
+
+  @include max(420px) {
+    font-size: 32px;
+  }
+
+  @include max(392px) {
+    font-size: 30px;
+  }
+}
