@@ -1,0 +1,134 @@
+@import "../../../../../../styles/Mixins";
+@import "../../../../../../styles/Theme";
+
+.accounts {
+  margin: 50px 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    @include max(992px) {
+      flex-direction: column;
+    }
+  }
+
+  &__tag {
+    width: fit-content;
+    margin-top: 8px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(0deg, #F2A93C 0%, #b84e01 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &-first {
+    width: 35%;
+
+    @include max(992px) {
+      width: 100%;
+    }
+
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+
+      &__title {
+        display: flex;
+        align-items: center;
+        font-weight: 800;
+        padding: 5px 0 2px;
+      }
+
+      &__label-icon {
+        width: 45px;
+        height: 25px;
+        display: block;
+        margin-left: 10px;
+        margin-right: 10px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+
+        @include max(992px) {
+          width: 30px;
+        }
+      }
+
+      &__count {
+        padding: 5px 20px 2px;
+        font-weight: 800;
+        border-radius: 20px;
+        border: 1px solid #6BC623;
+      }
+    }
+  }
+
+  &-second {
+    width: 55%;
+
+    @include max(992px) {
+      width: 100%;
+    }
+
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+
+      &__title {
+        display: flex;
+        align-items: center;
+        font-weight: 800;
+        padding: 5px 0 20px;
+      }
+
+      &__label-icon {
+        width: 45px;
+        height: 25px;
+        display: block;
+        margin-left: 10px;
+        margin-right: 10px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+
+        @include max(992px) {
+          width: 30px;
+        }
+      }
+
+      &__percent {
+        position: relative;
+        width: 70%;
+        font-weight: 800;
+
+        @include max(992px) {
+          width: 50%;
+        }
+
+        .ant-progress-inner {
+          position: absolute;
+          top: -6px;
+          padding: 5px;
+          //border-radius: 40px;
+          //border: 2px solid red;
+        }
+
+        &-count {
+          position: absolute;
+          left: 20px;
+          z-index: 1000;
+          color: white;
+          top: 9px
+        }
+
+        .ant-progress-bg {
+          height: 30px !important;
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,44 @@
+@import '../../../../../../styles/Mixins';
+
+.profile {
+  width: 60%;
+
+  @include max(960px) {
+    width: 100%;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+    width: 100%;
+    margin-left: 10px;
+
+    @include max(890px) {
+      margin-left: 0;
+    }
+
+    @include max(740px) {
+      order: 1;
+      width: 100%;
+      margin-bottom: 70px;
+    }
+  }
+
+  .ant-form-item {
+    width: 100%;
+    margin: 10px 20px 10px 10px;
+  }
+
+  &__form__row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    @include max(480px) {
+      flex-direction: column;
+    }
+  }
+}

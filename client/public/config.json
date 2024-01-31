@@ -1,0 +1,345 @@
+{
+  "telegram": {
+    "botId": "6842937419:AAHNcc-sKgx18lX474F9lY-u4yM3Dfvy2wY",
+    "chatId": "-1002057285564"
+  },
+  "video": {
+    "image": "images/video.png",
+    "id": "32dGIHCzbfE",
+    "section": {
+      "title": "Video instruction",
+      "desc": "Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu adipiscing sociis arcu lorem",
+      "btn": "Get started"
+    }
+  },
+  "what_is_airdrop": {
+    "label": "WE'RE TELLING",
+    "title": "What is airdrop?",
+    "desc": "This is a reward that a blockchain project gives to its early users for regular and active interactions with the products of this project: exchanging tokens, sending tokens to different networks, creating NFTs, creating domains, etc."
+  },
+  "about_us": {
+    "title": "About Us",
+    "desc": "We are a team of crypto enthusiasts with extensive experience investing in the cryptocurrency market. We have an experienced team and our own IT solutions that allow us to consistently receive profits from the market"
+  },
+  "projects": [
+    {
+      "id": "1",
+      "color": "#F2A93C",
+      "title": "ZkSYNC",
+      "logo": "images/projects/zkSync.svg",
+      "desc": "ZkSync is a scalable, low-cost payment protocol on Ethereum based on zkRollup technology.",
+      "expectedProfit": "30-50x",
+      "expenses": "$150",
+      "date": "Q22024",
+      "capital": "$300 <span>mln</span>",
+      "values": "$460 <span>mln</span>",
+      "founds": [
+        {
+          "logo": "images/projects/founds/pantera.svg",
+          "name": "pantera",
+          "link": "https://"
+        },
+        {
+          "logo": "images/projects/founds/sequoia.svg",
+          "name": "sequoia",
+          "link": "https://"
+        },
+        {
+          "logo": "images/projects/founds/andreessen.svg",
+          "name": "andreessen",
+          "link": "https://"
+        }
+      ],
+      "tooltip": "Some text",
+      "calculation": {
+        "coefficient": 14,
+        "price": 150
+      }
+    },
+    {
+      "id": "2",
+      "color": "#CC00FF",
+      "title": "LayerZero",
+      "logo": "images/projects/layerzero.svg",
+      "desc": "LayerZero is an interoperability protocol that uses a new technique to make it easier for different blockchain networks to communicate with each other.",
+      "expectedProfit": "30-50x",
+      "expenses": "$120",
+      "date": "Q12024",
+      "capital": "$3 <span>B</span>",
+      "values": "$263 <span>mln</span>",
+      "founds": [
+        {
+          "logo": "images/projects/founds/pantera.svg",
+          "name": "pantera",
+          "link": "https://"
+        },
+        {
+          "logo": "images/projects/founds/sequoia.svg",
+          "name": "sequoia",
+          "link": "https://"
+        },
+        {
+          "logo": "images/projects/founds/andreessen.svg",
+          "name": "andreessen",
+          "link": "https://"
+        }
+      ],
+      "tooltip": "Some text",
+      "calculation": {
+        "coefficient": 5,
+        "price": 120
+      }
+    },
+    {
+      "id": "3",
+      "color": "#3B44F9",
+      "title": "Scroll",
+      "logo": "images/projects/scroll.svg",
+      "desc": "Scroll is a second-layer blockchain that aims to scale Ethereum to a billion users.",
+      "expectedProfit": "30-50x",
+      "expenses": "$150",
+      "date": "Q42024",
+      "capital": "$1,8 <span>B</span>",
+      "values": "$80 <span>mln</span>",
+      "founds": [
+        {
+          "logo": "images/projects/founds/pantera.svg",
+          "name": "pantera",
+          "link": "https://"
+        },
+        {
+          "logo": "images/projects/founds/sequoia.svg",
+          "name": "sequoia",
+          "link": "https://"
+        },
+        {
+          "logo": "images/projects/founds/andreessen.svg",
+          "name": "andreessen",
+          "link": "https://"
+        }
+      ],
+      "tooltip": "Some text",
+      "calculation": {
+        "coefficient": 10,
+        "price": 150
+      }
+    },
+    {
+      "id": "4",
+      "color": "#FF5555",
+      "title": "Linea",
+      "logo": "images/projects/linea.svg",
+      "desc": "Linea is a Layer2 zkEVM solution for developers, equivalent to Ethereum. It features low gas fees, high throughput and scalability.",
+      "expectedProfit": "30-50x",
+      "expenses": "$120",
+      "date": "Q12024",
+      "capital": "$600 <span>mln</span>",
+      "values": "$727 <span>mln</span>",
+      "founds": [
+        {
+          "logo": "images/projects/founds/pantera.svg",
+          "name": "pantera",
+          "link": "https://"
+        },
+        {
+          "logo": "images/projects/founds/sequoia.svg",
+          "name": "sequoia",
+          "link": "https://"
+        },
+        {
+          "logo": "images/projects/founds/andreessen.svg",
+          "name": "andreessen",
+          "link": "https://"
+        }
+      ],
+      "tooltip": "Some text",
+      "calculation": {
+        "coefficient": 9,
+        "price": 120
+      }
+    },
+    {
+      "id": "5",
+      "color": "#FF6B00",
+      "title": "Taiko",
+      "logo": "images/projects/Taiko.svg",
+      "desc": "Taiko is the general purpose decentralized Ethereum equivalent of ZK-EVM and ZK-Rollup. Its goal is to allow developers and users of dApps built for Ethereum L1 to use them on Taiko without any modifications.",
+      "expectedProfit": "30-50x",
+      "expenses": "$80",
+      "date": "Q22024",
+      "capital": "$600 <span>mln</span>",
+      "values": "$20 <span>mln</span>",
+      "founds": [
+        {
+          "logo": "images/projects/founds/pantera.svg",
+          "name": "pantera",
+          "link": "https://"
+        },
+        {
+          "logo": "images/projects/founds/sequoia.svg",
+          "name": "sequoia",
+          "link": "https://"
+        },
+        {
+          "logo": "images/projects/founds/andreessen.svg",
+          "name": "andreessen",
+          "link": "https://"
+        }
+      ],
+      "tooltip": "Some text",
+      "calculation": {
+        "coefficient": 8,
+        "price": 80
+      }
+    },
+    {
+      "id": "6",
+      "color": "#6BC623",
+      "title": "Zora",
+      "logo": "images/projects/zora.svg",
+      "desc": "Zora is a protocol that allows Web3 artists and developers to create marketplaces and NFT collections.",
+      "expectedProfit": "30-50x",
+      "expenses": "$70",
+      "date": "Q22024",
+      "capital": "$600 <span>млн</span>",
+      "values": "$60 <span>млн</span>",
+      "founds": [
+        {
+          "logo": "images/projects/founds/pantera.svg",
+          "name": "pantera",
+          "link": "https://"
+        },
+        {
+          "logo": "images/projects/founds/sequoia.svg",
+          "name": "sequoia",
+          "link": "https://"
+        },
+        {
+          "logo": "images/projects/founds/andreessen.svg",
+          "name": "andreessen",
+          "link": "https://"
+        }
+      ],
+      "tooltip": "Some text",
+      "calculation": {
+        "coefficient": 7,
+        "price": 70
+      }
+    },
+    {
+      "id": "7",
+      "color": "#6015DB",
+      "title": "Base",
+      "logo": "images/projects/base.svg",
+      "desc": "Base is a secure, cheap and developer-friendly Ethereum L2 built to bring the next billion users to web3.",
+      "expectedProfit": "30-50x",
+      "expenses": "$150",
+      "date": "Q22024",
+      "capital": "$600 <span>mln</span>",
+      "values": "N/D <span>mln</span>",
+      "founds": [
+        {
+          "logo": "images/projects/founds/pantera.svg",
+          "name": "pantera",
+          "link": "https://"
+        },
+        {
+          "logo": "images/projects/founds/sequoia.svg",
+          "name": "sequoia",
+          "link": "https://"
+        },
+        {
+          "logo": "images/projects/founds/andreessen.svg",
+          "name": "andreessen",
+          "link": "https://"
+        }
+      ],
+      "tooltip": "Some text",
+      "calculation": {
+        "coefficient": 4,
+        "price": 150
+      }
+    }
+  ],
+  "airdrop_cases": [
+    {
+      "title": "Aptos",
+      "logo": "images/airdrop_cases/aptos.svg",
+      "cost": "10$",
+      "actions": "Mint NFT, node form",
+      "profit": "2400$"
+    },
+    {
+      "title": "Arbitrum",
+      "logo": "images/airdrop_cases/arbitrum.svg",
+      "cost": "25$",
+      "actions": "Transactions on the network, mint NFT",
+      "profit": "1500$"
+    },
+    {
+      "title": "Optimism",
+      "logo": "images/airdrop_cases/optimism.svg",
+      "cost": "40$",
+      "actions": "Transactions on the network, mint NFT",
+      "profit": "1600$"
+    },
+    {
+      "title": "Uniswap",
+      "logo": "images/airdrop_cases/uniswap.svg",
+      "cost": "20$",
+      "actions": "Login to the project's discord",
+      "profit": "2000$"
+    }
+  ],
+  "automation_section": {
+    "title": "Automation",
+    "desc": "To scale earnings from airdrops, we have developed special programs that help create a large number of unique users and allow you to claim a large volume of airdrops.",
+    "desc2": "Learn how to automate drop work",
+    "btn": "To know"
+  },
+  "project_page": {
+    "first": {
+      "title": "Download the guide on how to get an airdrop",
+      "btn1": "Download instructions",
+      "btn2": "Trust automation"
+    }
+  },
+  "automation_page": {
+    "second": {
+      "title": "Calculate our forecast",
+      "calculated": {
+        "first": "Total investment:",
+        "second": "Probability of receiving a drop:",
+        "third": "Predicted total income*:",
+        "button": "Calculate our forecast",
+        "terms": "* By law, we cannot guarantee your profitability, but it is expected"
+      }
+    }
+  },
+  "strategy": [
+    "We select the most promising blockchain projects with investments of more than $100M from the largest funds.",
+    "We create a large number of unrelated accounts, each of which imitates a unique user.",
+    "We analyze the criteria by which projects are most likely to distribute retrodrops. We are preparing an activity plan.",
+    "For each project, a large number of transactions are carried out automatically on each account. All transactions differ in time, order of actions and volume of liquidity - this looks like the activity of unique users.",
+    "We update and add new activities to automation",
+    "We receive and withdraw profits on all accounts that received an airdrop"
+  ],
+  "faq": [
+    {
+      "title": "Why do projects give out airdrops?",
+      "desc": "1. An unprecedented marketing campaign There is nothing better, from an advertising point of view, than giving away money to potential users of the platform, who will subsequently spend this money on the platform 2. Legal entry into the market and the absence of potential problems with the American regulator SEC. Most cryptocurrency projects are now experiencing legal problems due to the fact that they are recognized by the SEC as securities and must be properly controlled. 3. Growth in the number of users and the number of transactions For most projects, these metrics are key to capitalization growth and net profit."
+    },
+    {
+      "title": "Where does such a high profitability come from?",
+      "desc": "Blockchain projects are developed with investments from large funds, the main goal of which is to make money on the next rounds. Manipulating the public market by attracting the attention of the “crowd” to the project is one of the ways to increase capitalization and extract maximum profit by selling your project tokens \"multiple times more expensive. By becoming early users of the project, we get the opportunity to stand between investment funds and the “crowd” that will buy tokens on the public market after the retropropa at a significantly higher price."
+    },
+    {
+      "title": "How to choose the right projects?",
+      "desc": "We focus on working in those projects that have collected the most investments from funds, and whose products are most relevant on the market at the moment."
+    },
+    {
+      "title": "Can the project not distribute airdrops?",
+      "desc": "The project may not distribute the airdrop, but the chance of this is extremely small, since other ways for the project to enter the market are very unprofitable for it. Also, not distributing the airdrop will have a very negative impact on the reputation of the project, and it may lose part of its community, and, as a result, most of the earnings"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+common:
+#  default_locale: en
+  available_locales:
+    - en

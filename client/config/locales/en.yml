@@ -1,0 +1,39 @@
+en:
+  admin_page: This is ADMIN page
+  about_page: This is ABOUT page
+  header:
+    about:
+      - qwe
+      - ewq
+      - asd
+    admin: Admin
+    main: Main page
+
+  main_page:
+
+    header:
+      telling: WE'RE TELLING
+      history: HISTORICALLY
+    content:
+      telling: What is airdrop?
+      history: The most profitable type of investment is mining tokens before listing
+
+
+  automation_page:
+    first:
+      title: Automated receipt of airdrops
+      desc: Using specialized programs, we create the ability to perform the necessary actions in a project automatically.
+    second:
+      title: Calculate our forecast
+      calculated:
+        first: 'Итого инвестиций:'
+        second: 'Вероятность получения дропа:'
+        third: 'Прогнозируемый суммарный доход*:'
+        button: Calculate our forecast
+        terms: \* По закону мы не можем гарантировать вам доходность, но она предполагается
+    third:
+      title: Slider mechanics
+      desc: Based on your deposit, you can choose how many accounts and in which projects you can get. We recommend participating in at least 3 projects.
+    fourth:
+      title: How is profitability formed?
+      desc: The profitability of airdrops depends on the number of accounts and diversification of projects. The more accounts, the greater the potential profit. Investments will be used to develop accounts according to certain criteria in order to receive an airdrop.

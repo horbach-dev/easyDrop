@@ -1,0 +1,58 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String    @id @default(auto()) @map("_id") @db.ObjectId
+  username  String    @unique
+  password  String
+  isAdmin   Boolean   @default(false)
+  phone     String    @default("")
+  telegram  String    @default("")
+  metamask  String    @default("")
+  name      String    @default("")
+  refresh   String    @default("")
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  Projects  Project[]
+}
+
+model Project {
+  id                String         @id @default(auto()) @map("_id") @db.ObjectId
+  name              String
+  accountCount      Int            @default(0)
+  progress          Int            @default(0)
+  averageInvestment Int            @default(0)
+  expectedIncome    Int            @default(0)
+  user              User           @relation(fields: [userId], references: [id])
+  userId            String         @db.ObjectId
+  projectDetails    ProjectDetails @relation(fields: [name], references: [label])
+  createdAt         DateTime       @default(now())
+  updatedAt         DateTime       @updatedAt
+}
+
+model ProjectDetails {
+  id         String    @id @default(auto()) @map("_id") @db.ObjectId
+  label      String    @unique
+  logo       String    @default("")
+  color      String    @default("")
+  price      Int       @default(0)
+  active     Boolean   @default(true)
+  tokenNet   String    @default("")
+  listing    String    @default("")
+  stableCoin String    @default("")
+  collectNet String    @default("")
+  vesting    String    @default("")
+  commission Int       @default(0)
+  Project    Project[]
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+}
