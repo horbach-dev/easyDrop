@@ -36,15 +36,15 @@ const Login = () => {
       .then((userData) => UserActions.initUserStore(userData.data.user))
       .then(() => PopupActions.hidePopup())
       .then(() => nav(`/${locale}/profile`))
-      .catch(() => message.error('Ошибка заполенения формы!'))
+      .catch(() => message.error('Error filling out the form!'))
       .finally(() => setLoading(false))
   }
 
   const onFinishFailed = () => {
-    message.error('Ошибка заполенения формы!')
+    message.error('Error filling out the form!')
   }
 
-  const currentTitle = payload.title ? payload.title : 'Авторизация'
+  const currentTitle = payload.title ? payload.title : 'Authorization'
 
   return (
     <div className={classnames('download-guild', isLoading && 'download-guild_loading')}>
@@ -64,22 +64,22 @@ const Login = () => {
           <Input
                 className='form__item'
                 name='login'
-                label='Логин'
+                label='Login'
                 rules={[
                   {
                     required: true,
-                    message: 'Укажите Ваш логин',
+                    message: 'Enter Your login',
                   },
                 ]}
               />
           <Input
                 className='form__item'
                 name='password'
-                label='Пароль'
+                label='Password'
                 rules={[
                   {
                     required: true,
-                    message: 'Укажите Ваш пароль',
+                    message: 'Enter Your password',
 
                   },
                 ]}
@@ -91,17 +91,17 @@ const Login = () => {
                     disabled={isLoading}
                     icon={DownloadIcon}
                   >
-                {'Авторизоваться'}
+                {'Login'}
               </Button>
             </Space>
           </Form.Item>
         </Form>
         {isLoading && (
           <Spin
-                size='large'
-                className='form__loading'
-              />
-          )}
+            size='large'
+            className='form__loading'
+          />
+        )}
       </>
     </div>
   )

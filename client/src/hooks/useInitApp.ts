@@ -61,7 +61,7 @@ export default function useInitApp () {
         !isInitialized && appInitializer()
         ContentStore.mergeOntoState(response)
       })
-      .catch(error => console.error('Ошибка при загрузке файла config.json', error))
+      .catch(error => console.error('Error loading config.json file', error))
   }, [isValidLocale, isInitialized])
 
   return isInitialized && isValidLocale

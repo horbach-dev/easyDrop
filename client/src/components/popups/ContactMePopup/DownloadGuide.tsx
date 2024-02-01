@@ -68,12 +68,12 @@ const DownloadGuide = () => {
       .then(() => {
         setCompleted(true)
       })
-      .catch(error => console.error('Ошибка при запросе:', error))
+      .catch(error => console.error('Error when requesting:', error))
       .finally(() => setLoading(false))
   }
 
   const onFinishFailed = () => {
-    message.error('Ошибка заполенения формы!')
+    message.error('Error filling out the form!')
   }
 
   const currentTitle = payload.title ? payload.title : 'Download the guide on how to get an airdrop'
@@ -83,10 +83,10 @@ const DownloadGuide = () => {
       {isCompleted ? (
         <div className='download-guild__completed'>
           <Title center>
-            {'Ваша заявка успешно отправлена!'}
+            {'Your request has been successfully sent!'}
           </Title>
           <Button toHref='https://telegram.org/'>
-            {'Перейти в телеграм канал'}
+            {'Go to telegram channel'}
           </Button>
         </div>
         ) : (
@@ -106,42 +106,42 @@ const DownloadGuide = () => {
               <Input
               className='form__item'
               name='name'
-              label='Ваше имя'
+              label='Your name'
             />
               <Input
               className='form__item'
               name='phone'
-              label='Введите телефон'
+              label='Enter phone number'
               rules={[
                 {
                   required: true,
-                  message: 'Укажите Ваш телефон',
+                  message: 'Enter Your phone number',
                 },
               ]}
             />
               <Input
               className='form__item'
               name='email'
-              label='Введите email'
+              label='Enter email'
               rules={[
                 {
                   type: 'email',
-                  message: 'Введите корректный E-mail',
+                  message: 'Enter correct email',
                 },
                 {
                   required: true,
-                  message: 'Укажите E-mail',
+                  message: 'Enter email',
                 },
               ]}
             />
               <Input
               className='form__item'
               name='telegram'
-              label='Введите телеграм'
+              label='Enter telegram'
               rules={[
                 {
                   required: true,
-                  message: 'Укажите Ваш телеграм',
+                  message: 'Enter your telegram',
                 },
               ]}
             />
