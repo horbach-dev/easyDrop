@@ -14,7 +14,7 @@ async function bootstrap() {
     methods: ['GET', 'POST', 'PUT'],
     origin: true,
   });
-  await app.listen(configService.get<number>('PORT'));
+  await app.listen(configService.get<number>('PORT') || 80);
 }
 
 bootstrap();
