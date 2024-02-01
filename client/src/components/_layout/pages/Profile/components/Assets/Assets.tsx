@@ -17,6 +17,7 @@ const Assets = () => {
   const [id] = useStore(UserStore, s => s.id)
 
   const [pieData, setPieData] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
 
   const [pieDetailsOpen, setPieDetailsOpen] = useState(false)
   const [pieDetailsData, setPieDetainsData] = useState({})
@@ -79,7 +80,7 @@ const Assets = () => {
             predict_output: `${localStaticData.reduce((acc, val) => acc + val.predict_output, 0)} $`,
           }
         ])
-      })
+      }).finally(() => setIsLoading(false))
   }, [])
 
   return (

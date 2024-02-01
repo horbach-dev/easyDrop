@@ -1,13 +1,11 @@
 import React, { lazy, useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import AppRouter from '$components/_layout/AppRouter'
+import useStore from '$hooks/useStore'
 import RouterService from '$services/RouterService'
-
-
+import UserStore from '$stores/UserStore'
 
 import './styles/default.scss'
-import useStore from '$hooks/useStore'
-import UserStore from '$stores/UserStore'
 
 const App = () => {
   const [isAdmin] = useStore(UserStore, s => s.isAdmin)

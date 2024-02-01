@@ -1,7 +1,5 @@
 import React from 'react'
 import Progress from 'antd/es/progress/progress'
-import useStore from '$hooks/useStore'
-import ContentStore from '$stores/ContentStore'
 
 import './Account.scss'
 
@@ -10,8 +8,6 @@ interface IProp {
 }
 
 const Accounts = ({ accountsData }: IProp) => {
-  const [{ projects }] = useStore(ContentStore, store => ({ projects: store.projects || [] }))
-
   return (
     <div className='accounts'>
       <div className='container'>
@@ -21,6 +17,10 @@ const Accounts = ({ accountsData }: IProp) => {
               {'NUMBER OF ACCOUNTS'}
             </p>
           </div>
+
+          {
+            !accountsData.length && <p>no data</p>
+          }
 
           {
             accountsData.map(item => (
@@ -59,6 +59,10 @@ const Accounts = ({ accountsData }: IProp) => {
               {'ACCOUNT READINESS PERCENTAGE'}
             </p>
           </div>
+
+          {
+            !accountsData.length && <p>no data</p>
+          }
 
           {
             accountsData.map(item => (
