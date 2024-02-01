@@ -14,7 +14,7 @@ import { accessTokenGuard } from '../../guards/accessToken.guard';
 import { refreshTokenGuard } from '../../guards/refreshToken.guard';
 import { UsersService } from '../users/users.service';
 import { Response } from 'express';
-import * as moment from 'moment/moment';
+import moment from 'moment/moment';
 
 @Controller('api/auth')
 export class AuthController {
