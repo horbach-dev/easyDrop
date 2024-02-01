@@ -44,19 +44,19 @@ const PieDetails = ({ project, open, onClose }: IProp) => {
       </div>
       <div className='row'>
         <div className='col col-label'>
-          {'Статус'}
+          {'Status'}
         </div>
         <div className='col col-active'>
           <input
             type='checkbox'
             checked={!!project.active}
           />
-          {project.active ? 'Активен' : 'Не активен'}
+          {project.active ? 'Active' : 'Not active'}
         </div>
       </div>
       <div className='row'>
         <div className='col col-label'>
-          {'Цена токена'}
+          {'Token price'}
         </div>
         <div className='col'>
           {project.price}
@@ -64,7 +64,7 @@ const PieDetails = ({ project, open, onClose }: IProp) => {
       </div>
       <div className='row'>
         <div className='col col-label'>
-          {'Сеть токена'}
+          {'Token NET'}
         </div>
         <div className='col'>
           {project.tokenNet}
@@ -72,7 +72,7 @@ const PieDetails = ({ project, open, onClose }: IProp) => {
       </div>
       <div className='row'>
         <div className='col col-label'>
-          {'Листинг'}
+          {'Listing'}
         </div>
         <div className='col'>
           {project.listing}
@@ -80,7 +80,7 @@ const PieDetails = ({ project, open, onClose }: IProp) => {
       </div>
       <div className='row'>
         <div className='col col-label'>
-          {'Стейблкоин'}
+          {'Stablecoin'}
         </div>
         <div className='col'>
           {project.stableCoin}
@@ -88,7 +88,7 @@ const PieDetails = ({ project, open, onClose }: IProp) => {
       </div>
       <div className='row'>
         <div className='col col-label'>
-          {'Сеть сбора'}
+          {'Collection NET'}
         </div>
         <div className='col'>
           {project.collectNet}
@@ -96,7 +96,7 @@ const PieDetails = ({ project, open, onClose }: IProp) => {
       </div>
       <div className='row'>
         <div className='col col-label'>
-          {'Комиссия'}
+          {'Commission'}
         </div>
         <div className='col'>
           {project.commission}
@@ -104,7 +104,7 @@ const PieDetails = ({ project, open, onClose }: IProp) => {
       </div>
       <div className='row'>
         <div className='col col-label'>
-          {'Вестинг'}
+          {'Vesting'}
         </div>
         <div
           className='col col-label'

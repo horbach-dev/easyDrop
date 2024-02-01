@@ -60,7 +60,7 @@ const Profile = () => {
                   label='Name'
                   rules={[
                     {
-                      message: 'Укажите Ваш логин',
+                      message: 'Enter your login',
                     },
                   ]}
                 />
@@ -71,7 +71,7 @@ const Profile = () => {
                   label='Phone'
                   rules={[
                     {
-                      message: 'Укажите Ваш пароль',
+                      message: 'Enter your password',
                     },
                   ]}
                 />
@@ -82,12 +82,22 @@ const Profile = () => {
                   className='form__item'
                   name='metamask'
                   label='Metamask wallet'
+                  rules={[
+                    {
+                      message: 'Enter your metamask wallet',
+                    },
+                  ]}
                 />
                 <Input
                   disabled={isLoading}
                   className='form__item'
                   name='telegram'
                   label='Telegram'
+                  rules={[
+                    {
+                      message: 'Enter your telegram',
+                    },
+                  ]}
                 />
               </div>
               <Form.Item>
