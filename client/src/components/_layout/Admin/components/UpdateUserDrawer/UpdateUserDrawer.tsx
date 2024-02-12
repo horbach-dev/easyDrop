@@ -92,13 +92,12 @@ const UpdateUserDrawer = ({ onClose, open, user }: IProps) => {
             />
           </Form.Item>
           <Form.Item
-            name='active'
-            label='active'
-            rules={[{ required: true, message: 'Please enter number of accounts' }]}
+            name='isAdmin'
+            label='Is Admin'
           >
             <Radio.Group
               onChange={(value) => setUserData({ ...userData, isAdmin: value.target.value })}
-              defaultValue={true}
+              defaultValue={false}
             >
               <Radio.Button value={true}>
                 {'Admin'}
@@ -110,34 +109,34 @@ const UpdateUserDrawer = ({ onClose, open, user }: IProps) => {
           </Form.Item>
           <Form.Item
             name='phone'
-            label='phone'
-            rules={[{ required: true, message: 'Please enter password' }]}
+            label='Phone'
+            rules={[{ required: true, message: 'Please enter user phone' }]}
           >
             <Input
               name='phone'
-              placeholder='Please enter password'
+              placeholder='Please enter user phone'
               onChange={(e) => setUserData({ ...userData, phone: e.target.value })}
             />
           </Form.Item>
           <Form.Item
             name='metamask'
-            label='metamask'
-            rules={[{ required: true, message: 'Please enter password' }]}
+            label='Metamask'
+            rules={[{ required: true, message: 'Please enter metamask wallet' }]}
           >
             <Input
               name='metamask'
-              placeholder='Please enter password'
+              placeholder='Please enter metamask wallet'
               onChange={(e) => setUserData({ ...userData, metamask: e.target.value })}
             />
           </Form.Item>
           <Form.Item
             name='telegram'
-            label='telegram'
-            rules={[{ required: true, message: 'Please enter password' }]}
+            label='Telegram'
+            rules={[{ required: true, message: 'Please enter user telegram' }]}
           >
             <Input
               name='telegram'
-              placeholder='Please enter password'
+              placeholder='Please enter user telegram'
               onChange={(e) => setUserData({ ...userData, telegram: e.target.value })}
             />
           </Form.Item>

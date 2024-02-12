@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Input, message, Pagination, Space, Table } from 'antd'
+import { NavLink } from 'react-router-dom'
+import { Button, message, Pagination, Space, Table } from 'antd'
 import ProjectApi from '$api/project'
 import CreateProjectDrawer from '../CreateProjectDrawer'
 import UpdateProjectDrawer from '../UpdateProjectDrawer'
@@ -56,9 +57,23 @@ const UserProjectsTable = ({ userId }: IProps) => {
       key: 'expectedIncome',
     },
     {
+      title: 'Accounts',
+      dataIndex: '',
+      key: '',
+      render: (item) => {
+        return (
+          <NavLink
+            to={`/admin?tab=1&userId=${item.userId}&projectId=${item.id}`}
+          >
+            {'accounts'}
+          </NavLink>
+        )
+      },
+    },
+    {
       title: 'Action',
       dataIndex: '',
-      key: 'x',
+      key: '',
       render: (item) => {
         return (
           <Button
@@ -112,7 +127,7 @@ const UserProjectsTable = ({ userId }: IProps) => {
           type='primary'
           onClick={() => setCreateUserProjectDrawerOpen(true)}
         >
-          {'Create user'}
+          {'Create user project'}
         </Button>
         <Pagination
           disabled={loading}

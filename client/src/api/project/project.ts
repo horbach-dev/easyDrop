@@ -21,12 +21,9 @@ const GetUserProjectsWithDetails = (userId: string, page = 0) => {
   }).catch()
 }
 
-const GetUserProjectById = (id: string, page = 0) => {
+const GetUserProjectById = (id: string) => {
   return axiosClient.get<TUserStore>(`/api/project/${id}`, {
     withCredentials: true,
-    params: {
-      page,
-    }
   }).catch()
 }
 

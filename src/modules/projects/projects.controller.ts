@@ -11,7 +11,6 @@ import {
 } from '@nestjs/common';
 import { ProjectsService } from './projects.service';
 import { accessTokenGuard } from '../../guards/accessToken.guard';
-import { CreateProjectDto } from './dto/create-project.dto';
 
 @Controller('api')
 export class ProjectsController {

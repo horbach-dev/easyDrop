@@ -7,6 +7,7 @@ import { ProjectsModule } from './modules/projects/projects.module';
 import { ProjectsDetailsModule } from './modules/projects-details/projects-details.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
+import { ProjectAccountsModule } from './modules/project-accounts/project-accounts.module';
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import { join } from 'path';
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'client', 'dist'),
     }),
+    ProjectAccountsModule,
   ],
   controllers: [],
   providers: [],
