@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-max-props-per-line */
 
-import React, { lazy } from 'react'
+import React, { lazy, Suspense } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import AppLayout from '$components/_layout/AppLayout'
 import AutomationPage from '$components/_layout/pages/AutomationPage'
@@ -29,10 +29,12 @@ const AppRouter = () => {
   return (
     <Routes>
       {isAdmin && (
-        <Route path='admin' element={(
-          <Suspense fallback={null}>
-            <AdminRouter/>
-          </Suspense>
+        <Route
+          path='admin'
+               element={(
+                 <Suspense fallback={null}>
+                   <AdminRouter/>
+                 </Suspense>
           )}
         />
       )}
