@@ -28,7 +28,14 @@ const AppRouter = () => {
 
   return (
     <Routes>
-      {isAdmin && <Route path='admin' element={<AdminRouter/>} />}
+      {isAdmin && (
+        <Route path='admin' element={(
+          <Suspense fallback={null}>
+            <AdminRouter/>
+          </Suspense>
+          )}
+        />
+      )}
       <Route element={<AppLayout />}>
         {username && <Route path='profile' element={<ProfilePage/>} />}
         <Route index element={<MainPage />} />
