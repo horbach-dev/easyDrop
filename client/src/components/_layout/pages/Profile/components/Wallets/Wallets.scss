@@ -35,15 +35,44 @@
       justify-content: space-between;
       padding: 0 40px 10px;
 
+      @include max(680px) {
+        & {
+          padding: 0 20px 10px 10px;
+        }
+      }
+
       &-title {
         position: absolute;
         top: -51px;
         color: rgba(204, 203, 203, 0.7);
+        font-size: 18px;
+
+        @include max(780px) {
+          & {
+            top: -28px;
+          }
+        }
       }
 
       &-item {
         position: relative;
         min-width: 80px;
+      }
+
+      @include max(680px) {
+        &-item:first-child {
+          display: none;
+        }
+
+        &-item {
+          font-size: 14px;
+          min-width: 0;
+        }
+
+        &-item:last-child {
+          font-size: 0;
+          min-width: 0;
+        }
       }
 
       &:not(:first-child) {

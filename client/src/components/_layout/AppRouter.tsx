@@ -31,10 +31,10 @@ const AppRouter = () => {
       {isAdmin && (
         <Route
           path='admin'
-               element={(
-                 <Suspense fallback={null}>
-                   <AdminRouter/>
-                 </Suspense>
+           element={(
+             <Suspense fallback={null}>
+               <AdminRouter/>
+             </Suspense>
           )}
         />
       )}

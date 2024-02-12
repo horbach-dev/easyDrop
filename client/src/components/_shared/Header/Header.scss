@@ -27,12 +27,16 @@
 
   &__link {
     display: flex;
-    margin: 0 20px;
+    //margin: 0 20px;
     align-items: center;
     font-family: Montserrat-700;
     line-height: 1;
     color: #ffffff;
     text-decoration: none;
+
+    @include max(480px) {
+      font-size: 0;
+    }
 
     &::before {
       content: '';
