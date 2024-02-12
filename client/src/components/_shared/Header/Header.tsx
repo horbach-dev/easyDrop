@@ -11,7 +11,7 @@ import UserStore from '$stores/UserStore'
 import { useNavigate } from 'react-router-dom'
 
 const Header = () => {
-  const [username] = useStore(UserStore, store => store.username)
+  const [user] = useStore(UserStore, store => store)
   const nav = useNavigate()
 
   return (
@@ -36,14 +36,16 @@ const Header = () => {
           <Button
             className='header__link header__link_account'
             onClick={() => {
-              if (username) {
+              if (user?.username) {
                 nav('/profile')
               } else {
                 PopupActions.showPopup('Login')
               }
             }}
           >
-            {'Profile'}
+            {
+              user?.name || 'Profile'
+            }
           </Button>
           {/*<Button*/}
           {/*  // icon={DownloadIcon}*/}

@@ -40,9 +40,7 @@ const Profile = () => {
       <div className='profile__content'>
         <div className='profile__text'>
           <Title>
-            {
-              user?.name || 'Profile'
-            }
+            {'Profile'}
           </Title>
           <p>
             <Form
