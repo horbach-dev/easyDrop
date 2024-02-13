@@ -36,12 +36,12 @@ const Login = () => {
       .then((userData) => UserActions.initUserStore(userData.data.user))
       .then(() => PopupActions.hidePopup())
       .then(() => nav(`/${locale}/profile`))
-      .catch(() => message.error('Error filling out the form!'))
+      .catch(() => message.error('Invalid Login or Password'))
       .finally(() => setLoading(false))
   }
 
   const onFinishFailed = () => {
-    message.error('Error filling out the form!')
+    message.error('Invalid Login or Password')
   }
 
   const currentTitle = payload.title ? payload.title : 'Authorization'

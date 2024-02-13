@@ -48,8 +48,6 @@ const Table = ({ data, header }: IProps) => {
 
   if (!header || !data) return null
 
-  console.log('data', data)
-
   return (
     <div className='modern-table-wrap'>
       <div

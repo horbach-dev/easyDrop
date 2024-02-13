@@ -28,6 +28,7 @@
 
   &::-webkit-scrollbar {
     width: 5px;
+    background-color: $color-blue;
   }
 
   &::-webkit-scrollbar-track {
@@ -40,6 +41,10 @@
     border-radius: 5px;
     background-color: $color-pink;
   }
+  &::-webkit-scrollbar-track-piece {
+    border-radius: 5px;
+    background-color: $color-blue;
+  }
 }
 
 @mixin custom-horizontal-scroll {
@@ -49,6 +54,7 @@
 
   &::-webkit-scrollbar {
     height: 5px;
+    background-color: $color-blue;
   }
 
   &::-webkit-scrollbar-track {
@@ -60,6 +66,11 @@
   &::-webkit-scrollbar-thumb {
     border-radius: 5px;
     background-color: $color-yellow;
+  }
+
+  &::-webkit-scrollbar-track-piece {
+    border-radius: 5px;
+    background-color: $color-blue;
   }
 }
 
