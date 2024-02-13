@@ -128,7 +128,6 @@ const Assets = () => {
                 icon={TelegramIcon}
                 iconColor='#C0F'
                 isGradient
-                onClick={() => PopupActions.showPopup('DownloadGuide')}
                 className='chat-button'
               >
                 <a href='https://t.me'>
