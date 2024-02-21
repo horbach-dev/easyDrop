@@ -44,8 +44,8 @@ const DownloadGuide = () => {
         return `Телеграм: ${val[key]} \n\n`
       }
 
-      if (key === 'phone') {
-        return `Телефон: ${val[key]} \n\n`
+      if (key === 'whatsapp') {
+        return `whatsapp: ${val[key]} \n\n`
       }
 
       return `${key}: ${val[key]} \n\n`
@@ -110,12 +110,11 @@ const DownloadGuide = () => {
             />
               <Input
               className='form__item'
-              name='phone'
-              label='Enter phone number'
+              name='whatsapp'
+              label='Enter whatsapp'
               rules={[
                 {
-                  required: true,
-                  message: 'Enter Your phone number',
+                  message: 'Enter Your whatsapp',
                 },
               ]}
             />
@@ -140,7 +139,6 @@ const DownloadGuide = () => {
               label='Enter telegram'
               rules={[
                 {
-                  required: true,
                   message: 'Enter your telegram',
                 },
               ]}

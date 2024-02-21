@@ -8,7 +8,7 @@
   width: 100%;
   margin-bottom: 20px;
 
-  @include max(680px) {
+  @include max(550px) {
     flex-direction: column;
     max-width: 380px;
     margin: 0 auto 20px auto;
@@ -210,6 +210,7 @@
       .ant-slider-track,
       .ant-slider-step {
         border-radius: 0 0 30px 30px;
+        height: 10px;
       }
 
       .ant-slider-track {
@@ -232,6 +233,7 @@
         &:after {
           box-shadow: 0 0 0 3px #ffffff !important;
           background-color: #3B44F9 !important;
+          padding: 8px;
         }
       }
     }

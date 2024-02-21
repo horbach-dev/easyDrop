@@ -6,21 +6,8 @@ import Title from '$components/_shared/Title'
 import useStore from '$hooks/useStore'
 import ContentStore from '$stores/ContentStore'
 import CalculatorItem from './components/CalculatorItem'
-import Chart from './components/Chart'
 
 import './Calculator.scss'
-
-const COLORS = [
-  '#F2A93C',
-  '#CC00FF',
-  '#3B44F9',
-  '#FF5555',
-  '#FF6B00',
-  '#6BC623',
-  '#6015DB',
-  '#FF002E',
-  '#15A7E6',
-]
 
 function interpolate(value, minInput, maxInput, minOutput, maxOutput) {
   return minOutput + (maxOutput - minOutput) * (value - minInput) / (maxInput - minInput)
@@ -58,12 +45,8 @@ const Calculator = () => {
     const defaultInputValues = {}
 
     projects.forEach((item, index) => {
-      if (index <= 0) {
         defaultCheckboxes[item.title] = true
-        defaultInputValues[item.title] = 1
-      } else {
-        defaultCheckboxes[item.title] = false
-      }
+        defaultInputValues[item.title] = 0
     })
 
     const defaultPieData = getDefaultPieData()
@@ -167,10 +150,6 @@ const Calculator = () => {
           {content?.title}
         </Title>
         <div className='calculator__content'>
-          <div className='calculator__pie-wrap'>
-            <Chart pieData={pieData} />
-            <span className='calculator__pie-border' />
-          </div>
           <div className='calculator__project-items'>
             {projects.map(project => {
               return (
@@ -187,66 +166,58 @@ const Calculator = () => {
                 />
               )
             })}
-            <div className='calculator__pie-mobile'>
-              <div className='calculator__pie-container'>
-                <span/>
-                <span/>
-                <span/>
-                <Chart pieData={pieData} />
-              </div>
-            </div>
-            <div className='calculator__project-result'>
-              <div className='calculator__project-result-item'>
-                <p className='calculator__project-result-title'>
-                  {content?.calculated?.first}
-                </p>
-                <span className='calculator__project-result-value'>
-                  {`${invest} $`}
-                </span>
-              </div>
-              <div className='calculator__project-result-item'>
-                <p className='calculator__project-result-title'>
-                  {content?.calculated?.second}
-                </p>
-                <span className='calculator__project-result-value'>
-                  {`${prob} %`}
-                </span>
-              </div>
-              <div className='calculator__project-result-item'>
-                <p className='calculator__project-result-title'>
-                  {content?.calculated?.third}
-                </p>
-                <span className='calculator__project-result-value'>
-                  {`${profit} $`}
-                </span>
-              </div>
-              <Button
-                isGradient
-                onClick={() => {
-                  return  PopupActions.showPopup(
-                    'DownloadGuide',
-                    {
-                      form: {
-                        projects: inputValues,
-                        invest: `Инвестиций: ${invest}$`,
-                        profit: `Прогнозируемый доход: ${profit}$`,
-                        prob: `Вероятность дропа: ${prob}%`,
-                      },
-                      title: 'Trust automation',
-                    })
-                }}
-                icon={LogoIcon}
-              >
-                {content?.calculated?.button}
-              </Button>
-              <p className='calculator__project-result-term'>
-                {content?.calculated?.terms}
+          </div>
+          <div className='calculator__project-result'>
+            <div className='calculator__project-result-item'>
+              <p className='calculator__project-result-title'>
+                {content?.calculated?.first}
               </p>
+              <span className='calculator__project-result-value'>
+                {`${invest} $`}
+              </span>
             </div>
+            <div className='calculator__project-result-item'>
+              <p className='calculator__project-result-title'>
+                {content?.calculated?.second}
+              </p>
+              <span className='calculator__project-result-value'>
+                {`${prob} %`}
+              </span>
+            </div>
+            <div className='calculator__project-result-item'>
+              <p className='calculator__project-result-title calculator__project-result-title-income'>
+                {content?.calculated?.third}
+              </p>
+              <span className='calculator__project-result-value'>
+                {`${profit} $`}
+              </span>
+            </div>
+            <Button
+              isGradient
+              onClick={() => {
+                return PopupActions.showPopup(
+                  'DownloadGuide',
+                  {
+                    form: {
+                      projects: inputValues,
+                      invest: `Инвестиций: ${invest}$`,
+                      profit: `Прогнозируемый доход: ${profit}$`,
+                      prob: `Вероятность дропа: ${prob}%`,
+                    },
+                    title: 'Trust automation',
+                  })
+              }}
+              icon={LogoIcon}
+            >
+              {content?.calculated?.button}
+            </Button>
+            <p className='calculator__project-result-term'>
+              {content?.calculated?.terms}
+            </p>
           </div>
         </div>
       </div>
-      <span className='calculator__decor calculator__decor_right' />
+      <span className='calculator__decor calculator__decor_right'/>
     </section>
   )
 }

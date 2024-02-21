@@ -16,9 +16,9 @@ import './MainPage.scss'
 const header = {
   title: 'Project name',
   date: 'Year of release',
-  invest: 'Average profit',
-  profit: 'Average profitability',
+  invest: 'Average investments',
   sum: 'Total income',
+  profit: 'Average profitability',
   link: 'More about the project'
 }
 
@@ -54,6 +54,14 @@ const data = [
     profit: '$1600',
     sum: '40x',
     link: 'https://cryptorank.io/price/optimism'
+  },
+  {
+    title: 'Starknet',
+    data: '2024',
+    invest: '$30',
+    profit: '$1800',
+    sum: '60x',
+    link: 'https://cryptorank.io/price/starknet'
   }
 ]
 

@@ -31,29 +31,29 @@ const Input = ({ name, label, className, placeholder = '', rules, disabled = fal
   const isReq = !!rules?.find(item => item.required)
 
   switch(name) {
-    case 'phone':
-      return (
-        <Form.Item
-          className={classnames('form-input', isFocus && 'form-input_focus', isReq && 'form-input_req', className)}
-          name={name}
-          label={label}
-          rules={rules}
-        >
-          <InputMask
-            mask='+7 (999) 999 99 99'
-            placeholder={placeholder}
-            onFocus={onFocus}
-            onBlur={onBlur}
-          >
-            {(inputProps) => (
-              <ANTDInput
-                disableUnderline
-                {...inputProps}
-              />
-            )}
-          </InputMask>
-        </Form.Item>
-      )
+    // case 'phone':
+    //   return (
+    //     <Form.Item
+    //       className={classnames('form-input', isFocus && 'form-input_focus', isReq && 'form-input_req', className)}
+    //       name={name}
+    //       label={label}
+    //       rules={rules}
+    //     >
+    //       <InputMask
+    //         mask='+9 (999) 999 99 99'
+    //         placeholder={placeholder}
+    //         onFocus={onFocus}
+    //         onBlur={onBlur}
+    //       >
+    //         {(inputProps) => (
+    //           <ANTDInput
+    //             disableUnderline
+    //             {...inputProps}
+    //           />
+    //         )}
+    //       </InputMask>
+    //     </Form.Item>
+    //   )
     case 'password':
       return (
         <Form.Item

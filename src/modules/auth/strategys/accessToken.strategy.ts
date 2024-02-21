@@ -28,6 +28,6 @@ export class AccessTokenStrategy extends PassportStrategy(Strategy, 'jwt') {
   }
 
   validate(payload: JwtPayload) {
-    return { id: payload.sub, username: payload.username };
+    return { ...payload };
   }
 }
