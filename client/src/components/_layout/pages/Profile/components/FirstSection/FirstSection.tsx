@@ -22,7 +22,7 @@ const FirstSection = () => {
               iconColor='#C0F'
               isGradient
             >
-              <a href='https://t.me'>
+              <a href='https://t.me/EasyDrop_Admin'>
                 {'Chat with support'}
               </a>
             </Button>

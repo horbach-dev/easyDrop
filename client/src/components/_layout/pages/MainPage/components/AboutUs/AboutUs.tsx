@@ -15,7 +15,7 @@ const AboutUs = () => {
             </Title>
             <p>
               {/* eslint-disable-next-line max-len */}
-              {'We are a team of crypto enthusiasts with extensive experience investing in the cryptocurrency market. We have an experienced team and our own IT solutions that allow us to consistently receive profits from the market'}
+              {'We are a team of crypto enthusiasts with extensive experience investing in the cryptocurrency market. We have an experienced team and our own IT solutions that allow us to consistently receive profits from the market.'}
             </p>
           </div>
         </div>

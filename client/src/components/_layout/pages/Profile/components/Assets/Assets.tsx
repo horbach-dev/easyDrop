@@ -130,7 +130,7 @@ const Assets = () => {
                 isGradient
                 className='chat-button'
               >
-                <a href='https://t.me'>
+                <a href='https://t.me/EasyDrop_Admin'>
                   {'Chat with support'}
                 </a>
               </Button>
